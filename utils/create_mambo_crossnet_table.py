@@ -103,7 +103,7 @@ def create_mambo_crossnet_table(input_file, src_file, dst_file, dataset_name,
     if counter == -1:
         counter = utils.get_max_id(outFNm)
     if verbose:
-        print 'Starting at mambo id: %d' % counter
+        print ('Starting at mambo id: %d' % counter)
     with open(inFNm, 'r') as inF, open(outFNm, 'a') as fullF, open(outFNm2, 'w') as dbF:
                 # Add schema/metadata
         if counter == 0:
@@ -134,7 +134,7 @@ def create_mambo_crossnet_table(input_file, src_file, dst_file, dataset_name,
             if id1 == '' or id2 == '':
                 continue
             if skip_missing_ids and (id1 not in src_mapping or id2 not in dst_mapping):
-                #print id1, id2
+                #print (id1, id2)
                 continue
             attr_strs = ''
             for i in range(len(vals)):
@@ -145,7 +145,7 @@ def create_mambo_crossnet_table(input_file, src_file, dst_file, dataset_name,
             dbF.write('%d%s%d%s%d%s\n' % (counter, delimiter, src_db_id, delimiter, dst_db_id, attr_strs))
             counter += 1
     if verbose:
-        print 'Ending at mambo id: %d' % counter
+        print ('Ending at mambo id: %d' % counter)
 
 
 if __name__ == "__main__":

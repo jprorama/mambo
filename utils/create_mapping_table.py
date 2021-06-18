@@ -78,7 +78,7 @@ def create_mapping_table(mapping_file, mindex1, mindex2, output_file,
             elif len(terms) < index2:
                 terms.append(mapping[name])
             elif terms[index2-1] == NONE:
-                print terms, name, mapping[name]
+                print (terms, name, mapping[name])
                 terms[index2-1] = name
 
             string = delimiter.join(terms)

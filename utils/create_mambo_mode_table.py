@@ -71,7 +71,7 @@ def create_mambo_mode_table(input_file, db_id, mode_name, dataset_name,
     # Read input file, create output files.
     seen = set()
     if verbose:
-        print 'Starting at mambo id: %d' % counter
+        print ('Starting at mambo id: %d' % counter)
     with open(inFNm, 'r') as inF, open(outFNm, 'a') as outF, open(dbFNm, 'w') as dbF:
         if counter == 0:
             outF.write('# Full mode table for %s\n' % mode_name)
@@ -103,7 +103,7 @@ def create_mambo_mode_table(input_file, db_id, mode_name, dataset_name,
             seen.add(node_id)
             counter += 1
     if verbose:
-        print 'Ending at mambo id: %d' % counter
+        print ('Ending at mambo id: %d' % counter)
 
 
 if __name__ == "__main__":
