@@ -45,7 +45,7 @@ python create_mapped_mode_table.py protein go_parsed.tsv GO_UNIPROT 1 uniprot_en
 
 import argparse
 import os
-import utils
+from . import utils
 
 COMMENT = ["#", "!", "\n"]
 DELIMITER = "\t"

@@ -42,7 +42,7 @@ python create_mambo_mode_table.py hugo.tsv gene HUGO 1 --output_dir outputs/gene
 '''
 
 import argparse
-import utils
+from . import utils
 import os
 
 COMMENT = ["#", "!", "\n"]
